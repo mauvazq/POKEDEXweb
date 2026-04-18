@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex API</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body class="dark">
+    <header class="navbar" >
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" alt="" onclick="location.href= 'home.html'">
+        <button id="pokemonBtn"> Pokemon </button>
+        <button id="teamBtn" class="teamBtn"> Team </button>
+        <button id="movesBtn"> Moves </button>
+        <button id="itemsBtn"> Items </button>
+        <button id="darkMode"  onclick="switchMode()">🌒 Dark Mode</button>
+    </header>
+
+    <div id="searchDiv" class="searchDiv">
+        <input type="text" id="search" placeholder="🔍 Search for a pokemon...">
+        <div class="menu">
+            <button style="margin: 3px 0;" class="menuButt">Filter by Region. v</button>
+            <div class="submenu">
+                <button class="menuButt " onclick="loadAll(1)">All</button>
+                <button class="menuButt " >1. Kanto</button>
+                <button class="menuButt " >2. Johto</button>
+                <button class="menuButt " >3. Hoenn</button>
+                <button class="menuButt " >4. Sinnoh</button>
+                <button class="menuButt " >5. Unova</button>
+                <button class="menuButt " >6. Kalos</button>
+                <button class="menuButt " >7. Alola</button>
+                <button class="menuButt " >8. Galar</button>
+                <button class="menuButt " >9. Paldea</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="pokemonDiv" class="pokemonDiv">
+
+        
+
+    </div>
+
+    <div id="pagination" class="pagination">
+        <button id="prev5Btn">« 5</button>
+        <button id="prevBtn">< 1</button>
+        <span id="pageInfo">Page 1 / 1</span>
+        <button id="nextBtn">1 ></button>
+        <button id="next5Btn">5 »</button>
+        <button id="allPagesBtn">All</button>
+    </div>
+    
+    <div id="teamModal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="close-team" onclick="closeTeamManager()">&times;</span>
+            <h2>Equipo Pokémon</h2>
+            <div id="teamSlots" class="team-slots"></div>
+            <div id="teamDetails" class="team-details">
+                <p>Haz clic en una pokebola para ver o eliminar tu Pokémon.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalDetail"></div>
+        </div>
+    </div>
+    
+
+<script src="script.js">
+
+
+
+</script>
+</html>
