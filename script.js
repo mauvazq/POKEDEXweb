@@ -8,6 +8,8 @@ const switchMode = () => {
     }
 }
 
+const input = document.getElementById('search')
+
 input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         const value = document.getElementById('search').value.trim()
