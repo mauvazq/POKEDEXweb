@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark loginPage">
+    <header class="navbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" alt="" onclick="location.href='home.html'">
+        <button id="darkMode" onclick="switchMode()">🌒 Dark Mode</button>
+    </header>
+
+    <main class="loginWrapper">
+        <form class="loginCard" onsubmit="return fakeLogin(event)">
+            <h1>Inicio de sesion</h1>
+            <p>Ingresa tus datos para continuar.</p>
+
+            <label for="loginUser">Usuario</label>
+            <input id="loginUser" type="text" placeholder="Entrenador pokemon">
+
+            <label for="loginPassword">Contrasena</label>
+            <input id="loginPassword" type="password" placeholder="********">
+
+            <button type="submit" class="mainButt loginButt">Entrar</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

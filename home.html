@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
-    
-<div class="menuDiv">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" alt="" class="menuImg">
 
+<header class="navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" alt="" onclick="location.href='home.html'">
+    <button id="darkMode" onclick="switchMode()">🌒 Dark Mode</button>
+</header>
+
+<div class="menuDiv">
+    <button class="mainButt" onclick="location.href='login.html'"> Inicio de sesion </button>
     <button class="mainButt" onclick="location.href='pokemon.html'"> Pokedex </button>
-    <button class="mainButt"> Peleas pokemon </button>
+    <button class="mainButt" onclick="location.href='peleas.html'"> Peleas pokemon </button>
     <button class="mainButt" onclick="location.href='info.html'"> Info del equipo </button>
 
 </div>
-    
+
+<script src="script.js"></script>
+
 </body>
 </html>

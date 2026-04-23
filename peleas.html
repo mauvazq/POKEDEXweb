@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peleas Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body.peleas {
+            padding-top: 60px !important;
+        }
+        body.peleas .navbar {
+            display: flex !important;
+        }
+        body.peleas .navbar button,
+        body.peleas .navbar .searchDiv {
+            display: none !important;
+        }
+        body.peleas .navbar img {
+            cursor: pointer;
+            width: 120px;
+        }
+        body.peleas .navbar #darkMode {
+            display: inline-block !important;
+        }
+    </style>
+</head>
+<body class="dark peleas">
+    
+<header class="navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" alt="" onclick="location.href='home.html'">
+    <button id="darkMode" onclick="switchMode()">🌒 Dark Mode</button>
+</header>
+
+<div id="battleContainer" class="battle-container">
+    <div id="noTeamMessage" class="no-team-message" style="display: none;">
+        <h2>No tienes Pokemon en tu equipo</h2>
+        <p>Ve a la Pokédex para añadir Pokémon a tu equipo.</p>
+        <button class="mainButt" onclick="location.href='pokemon.html'">Ir a la Pokédex</button>
+    </div>
+
+    <div id="battleArena" class="battle-arena" style="display: none;">
+        <div class="battle-header">
+            <div>
+                <p class="battle-kicker">Modo jefe</p>
+                <h1>Pelea Pokemon</h1>
+                <p id="battleSubtext">Tu equipo se enfrenta a un jefe aleatorio con estadisticas x3.</p>
+            </div>
+            <button class="battle-refresh" onclick="startBattle()">Nuevo jefe</button>
+        </div>
+
+        <div class="boss-section">
+            <div class="pokemon-info">
+                <span class="boss-badge">Jefe x3</span>
+                <h3 id="bossName">Boss Pokemon</h3>
+                <p id="bossMeta" class="battle-meta">ATQ 0 · DEF 0 · VEL 0</p>
+                <div class="hp-bar-container">
+                    <div id="bossHpBar" class="hp-bar"></div>
+                </div>
+                <p id="bossHpText">PV: 0 / 0</p>
+            </div>
+            <img id="bossSprite" src="" alt="Boss Pokemon" class="boss-sprite">
+        </div>
+
+        <div class="player-section">
+            <img id="playerSprite" src="" alt="Player Pokemon" class="player-sprite-back">
+            <div class="pokemon-info">
+                <span class="player-badge">Tu equipo</span>
+                <h3 id="playerName">Tu Pokemon</h3>
+                <p id="playerMeta" class="battle-meta">Pokemon 1 de 1 · ATQ 0 · DEF 0</p>
+                <div class="hp-bar-container">
+                    <div id="playerHpBar" class="hp-bar"></div>
+                </div>
+                <p id="playerHpText">PV: 0 / 0</p>
+            </div>
+        </div>
+
+        <div id="battleLog" class="battle-log"></div>
+
+        <div id="movesContainer" class="moves-container">
+            <h3>Selecciona un movimiento:</h3>
+            <div id="movesButtons" class="moves-buttons"></div>
+        </div>
+
+        <div id="gameOverContainer" class="game-over-container" style="display: none;">
+            <h2 id="gameOverTitle">La pelea termino</h2>
+            <button class="mainButt" onclick="startBattle()">Reiniciar Pelea</button>
+            <button class="mainButt" onclick="location.href='pokemon.html'">Volver a la Pokédex</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
